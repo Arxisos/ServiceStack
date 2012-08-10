@@ -67,7 +67,13 @@ namespace ServiceStack.ServiceHost.Tests
 			public IFile[] Files { get; private set; }
 
 			public string ApplicationFilePath { get; private set; }
-		}
+
+
+            public bool IsLocal
+            {
+                get { throw new NotImplementedException(); }
+            }
+        }
 
 		readonly List<MockUrlHttpRequest> allResults = new List<MockUrlHttpRequest> {
 			new MockUrlHttpRequest(null, "/handler.all35/json/metadata", "/handler.all35/json/metadata?op=Hello"),
